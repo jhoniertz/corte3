@@ -17,4 +17,10 @@ jobs:
       - name: Instalar node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: 22
+        
+      - name: validar codigo HTML
+        run: |
+         echo "inicio"
+         npx html-validate "**/*.html"
+         echo "fin"
